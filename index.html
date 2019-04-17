@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="calc.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div id="main">
+            <h1>Tip Calculator</h1>
+            <label for="valor" class="labels">Bill Value</label>
+            <input type="number" class="inputs" id="valor" required min="0" max="100000">
+            
+            <label for="pessoas" class="labels">People</label>
+            <input type="number" class="inputs" id="pessoas" required min="1" max="1000">
+
+            <label for="qualidade" class="labels">How was the service?</label>
+            <select name="Qualidade" id="qualidade" required>
+                <option value="0.25" selected>Excellent! (25%)</option>
+                <option value="0.15">Good (15%)</option>
+                <option value="0.1">Average (10%)</option>
+                <option value="0.05">Bad (5%)</option>
+            </select>
+            <button id="calcular">Calculate!</button>   
+        </div>
+        <div id="opacity">
+            <div id="endpage">
+                    <p>The tip value is: <span  id="result"></span></p>
+                    <p>The tip value per person is: <span  id="individual"></span></p>
+                    <p>The total value is: <span  id="totalResult"></span></p>
+                    <p>The indiviual value is: <span  id="totalIndividual"></span></p>    
+            </div>
+            <footer><i>Click anywhere to exit</i></footer>
+        </div>
+    </body>
+
+    <script src="./calc.js"></script>
+</html>
